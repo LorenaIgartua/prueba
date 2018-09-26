@@ -1,0 +1,136 @@
+body {
+  background-color: #f3f4ec;
+}
+
+.card {
+  background-color: #f3f4ec;
+}
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    width: 9.4%;
+    border-radius: 6px;
+    border: 2px solid black;
+  }
+
+.boton_negro {
+  color: black;
+  background-color: black;
+}
+
+.boton_marron {
+  color: maroon;
+  background-color: maroon;
+}
+
+.boton_rojo {
+  color: red;
+  background-color: red;
+}
+
+.boton_naranja {
+  color: orange;
+  background-color: orange;
+}
+
+.boton_amarillo {
+  color: yellow;
+  background-color: yellow;
+}
+
+.boton_aceituna {
+  color: olive;
+  background-color: olive;
+}
+
+.boton_verde {
+  color: green;
+  background-color: green;
+}
+
+.boton_azul {
+  color: navy;
+  background-color: navy;
+}
+
+.boton_violeta {
+  color: purple;
+  background-color: purple;
+}
+
+.boton_gris {
+  color: silver;
+  background-color: silver;
+}
+
+
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="button"] {
+    display: none;
+}
+
+.custom-file-upload {
+    cursor: pointer;
+}
+
+.container-canvas {
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+p {
+    font-size: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding-bottom:0;
+}
+
+.opc {
+  align-self: center;
+}
+
+.card-body {
+  padding: 0;
+  align-content: center;
+}
+
+.form-inline {
+  display: flex;
+  /* flex-flow: row wrap; */
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.ancho {
+  margin-top: 1%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+select {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+option {
+  border-bottom: 2px solid black;
+}
+
+/* .linea1{
+  line-height: 100%;
+} */

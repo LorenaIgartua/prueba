@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TRABAJO 1</title>
+  </head>
+  <body>
+
+
+    <div class="container">
+      <nav class="navbar-light ">
+              <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <a id="logo" class="navbar-brand" href="#">
+                      <img src="images/logo.png" width="50" height="50" alt="">
+                      FOTO - LAB
+                    </a>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                  <label class="custom-file-upload">
+                      <img src="images/abrir.png" width="50" height="50" alt="">
+                      <input type="file" id="subir" name=""/>
+                          <p class="text-center">ABRIR</p>
+                  </label>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                  <!-- <button type="button" id="lapiz" name="button"><img src="images/lapiz.png" width="30" height="30" alt=""></button> -->
+                  <label class="custom-file-upload">
+                      <img src="images/lapiz.png" width="50" height="50" alt="">
+                      <input type="button" name="" id="lapiz" value="Lapiz" onclick="herramienta='lapiz'">
+                      <p class="text-center">DIBUJAR</p>
+                  </label>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                  <label class="custom-file-upload">
+                      <img src="images/goma.png" width="50" height="50" alt="">
+                      <input type="button" id="goma" name="" value="Borrador" onclick="herramienta='borrador'">
+                      <p class="text-center">BORRAR</p>
+                  </label>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                  <label class="custom-file-upload">
+                      <img src="images/brillo.png" width="50" height="50" alt="">
+                      <input type="button" name="" id="brillo" value="" onclick="">
+                      <p class="text-center">BRILLO</p>
+                  </label>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                  <label class="custom-file-upload">
+                      <img src="images/filtros.png" width="50" height="50" alt="">
+                      <input type="button" name="" id="filtros" value="" onclick="">
+                      <p class="text-center">FILTROS</p>
+                  </label>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                  <label class="custom-file-upload">
+                      <img src="images/recargar.png" width="50" height="50" alt="">
+                      <input type="button" name="" id="limpiar" value="" onclick="">
+                      <p class="text-center">BORRAR</p>
+                  </label>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+                </div>
+              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <label class="custom-file-upload">
+                    <img src="images/guardar.png" width="50" height="50" alt="">
+                    <input type="button" name="" id="guardar" value="" onclick="">
+                    <p class="text-center">GUARDAR</p>
+                  </label></a>
+                </div>
+              </div>
+      </nav>
+    </div>
+
+  <div class="container" id="menuBrillo" style="display:none">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <div class="form-group ">
+              <p class="ancho">Seleccione nivel de brillo:</p>
+              <input class="form-control form-control-sm" id="valor" type="range" min="-100" max="100" value="1" step="1" oninput="aplicaBrillo(this.value)">
+              <div class="" id="numBr">
+
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+        </div>
+      </div>
+  </div>  <!-- cierra div menu Brillo -->
+
+  <div class="container" id="menuLapiz" style="display:none">
+    <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+              <button type="button" class="btn boton_personalizado boton_negro" onclick="cambioColor('333')"></button>
+              <button type="button" class="btn boton_personalizado boton_marron" onclick="cambioColor('800000')"></button>
+              <button type="button" class="btn boton_personalizado boton_rojo" onclick="cambioColor('ff0000')"></button>
+              <button type="button" class="btn boton_personalizado boton_naranja" onclick="cambioColor('ffA500')"></button>
+              <button type="button" class="btn boton_personalizado boton_amarillo" onclick="cambioColor('ffff00')"></button>
+              <button type="button" class="btn boton_personalizado boton_aceituna" onclick="cambioColor('808000')"></button>
+              <button type="button" class="btn boton_personalizado boton_verde" onclick="cambioColor('008000')"></button>
+              <button type="button" class="btn boton_personalizado boton_azul" onclick="cambioColor('000080')"></button>
+              <button type="button" class="btn boton_personalizado boton_violeta" onclick="cambioColor('800080')"></button>
+              <button type="button" class="btn boton_personalizado boton_gris" onclick="cambioColor('c0c0c0')"></button>
+              <br>
+              <div class="form-group ">
+                <p class="ancho">Ancho de linea:</p>
+                <!-- <label for="sel1">Ancho de linea:</label> -->
+                <select class="form-control form-control-sm" id="grosor">
+                  <option  class="linea1" value="1" onclick="cambioGrosor()"> 1 </option>
+                  <option value="3" onclick="cambioGrosor()"> 3 </option>
+                  <option  value="5" onclick="cambioGrosor()"> 5 </option>
+                  <option  value="8" onclick="cambioGrosor()"> 8 </option>
+                  <option value="12" onclick="cambioGrosor()"> 12 </option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+            </div>
+    </div>
+
+  </div>  <!-- cierra div menu Lapiz -->
+
+
+      <div class="container" id="menuFiltros" style="display:none">
+        <div class="row">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+              <label class="custom-file-upload">
+            <div class="card-body">
+              <canvas id="ver_sepia" width="150" height="105" style="border:1px solid #000000;">
+              </canvas>
+              <p class="text-center">SEPIA</p>
+                  <input type="button" id="sepia" name=""/>
+            </div>
+                </label>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+              <label class="custom-file-upload">
+            <div class="card-body">
+              <canvas class="" id="ver_binario" width="150" height="105" style="border:1px solid #000000;">
+              </canvas>
+              <p class="text-center">BINARIO</p>
+                  <input type="button" id="binario" name=""/>
+            </div>
+                </label>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+              <label class="custom-file-upload">
+            <div class="card-body">
+              <canvas class="" id="ver_negativo" width="150" height="105" style="border:1px solid #000000;">
+              </canvas>
+              <p class="text-center">NEGATIVO</p>
+                  <input type="button" id="negativo" name=""/>
+            </div>
+                </label>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+              <label class="custom-file-upload">
+            <div class="card-body">
+              <canvas class="" id="ver_blur" width="150" height="105" style="border:1px solid #000000;">
+              </canvas>
+              <p class="text-center">BLUR</p>
+                  <input type="button" id="blur" name=""/>
+            </div>
+                </label>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+              <label class="custom-file-upload">
+            <div class="card-body">
+              <canvas class="" id="ver_bordes" width="150" height="105" style="border:1px solid #000000;">
+              </canvas>
+              <p class="text-center">BORDES</p>
+                  <input type="button" id="bordes" name=""/>
+            </div>
+                </label>
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+          </div>
+        </div>
+      </div>  <!-- cierra div menu Filtros -->
+
+    <div class="container pizarra">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+        </div>
+        <div class="text-center col-lg-8 col-md-8 col-sm-8 col-xs-8">
+
+          <canvas class="container-canvas rounded mb-1 img-fluid" id="canvas" width="750" height="435"
+          style="border:1px solid #000000;">
+          </canvas>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center margin-bottom"><br>
+        <p> Interfaces de usuario e interacción - 2018 </p>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="js/entrega1.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
